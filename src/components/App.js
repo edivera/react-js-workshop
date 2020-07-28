@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 
+import PeopleList from './PeopleList';
+
 class App extends Component {
     render() {
         return (
             <div>
-                <h1>Hello app.js</h1>
+                <PeopleList></PeopleList>
             </div>
         )
     }
