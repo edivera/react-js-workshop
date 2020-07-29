@@ -7,7 +7,7 @@ export class Heading extends Component {
         return (
             <div className="home">
                 <div className="homeLogo">
-                    <h3>Screamer</h3>
+                    <h3>Screemer</h3>
                 </div>
 
                 <form>

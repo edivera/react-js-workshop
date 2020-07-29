@@ -16,7 +16,8 @@ import PeopleList from './components/PeopleList';
 import rootReducer from './reducers/index';
 import PersonDetail from './components/PersonDetail';
 
-const createReduxReducerStore = applyReduxReducerWrapper(promiseMiddleware)(storeCreator)
+const createReduxReducerStore = 
+  applyReduxReducerWrapper(promiseMiddleware)(storeCreator)
 
 // definitely need the react dom render
 // we added a redux provider to use the redux framework

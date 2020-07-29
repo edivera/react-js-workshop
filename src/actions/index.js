@@ -1,5 +1,5 @@
-// actions are lamda functions
-// or handlers for the reducers
+// actions are triggered functions
+// update state through their reducers
 export const getPeople = () => {
 
     const peopleData = fetch('http://localhost:3004/people')
