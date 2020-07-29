@@ -8,12 +8,14 @@ import {applyMiddleware as applyReduxReducerWrapper,
   createStore as storeCreator} from 'redux'
   // reducerWrapper has dispatch and getState
 
+import promiseMiddleware from 'redux-promise'
+
 import App from './components/App';
 import Heading from './components/Heading';
 import PeopleList from './components/PeopleList';
 import rootReducer from './reducers/index';
 
-const createReduxReducerStore = applyReduxReducerWrapper()(storeCreator)
+const createReduxReducerStore = applyReduxReducerWrapper(promiseMiddleware)(storeCreator)
 
 // definitely need the react dom render
 // we added a redux provider to use the redux framework
