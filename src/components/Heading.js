@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import {connect} from 'react-redux';
+import {getPeople} from '../actions/index';
 
 export class Heading extends Component {
     render() {
@@ -9,11 +11,18 @@ export class Heading extends Component {
                 </div>
 
                 <form>
-                    <input type="text" placeholder="search..." value="search" />
+                    <input type="text" placeholder="search..." defaultValue="search" onChange={() => {console.log("+++++"); this.props.getPeople(); console.log(this.props.allPeople)}} />
                 </form>
             </div>
         )
     }
 }
 
-export default Heading
+function mapStateToProps(state) {
+    console.log(state)
+    return {
+        allPeople:state.people.getPeople
+    }
+}
+
+export default connect(mapStateToProps, {getPeople})(Heading)
