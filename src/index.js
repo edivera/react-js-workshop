@@ -14,6 +14,7 @@ import App from './components/App';
 import Heading from './components/Heading';
 import PeopleList from './components/PeopleList';
 import rootReducer from './reducers/index';
+import PersonDetail from './components/PersonDetail';
 
 const createReduxReducerStore = applyReduxReducerWrapper(promiseMiddleware)(storeCreator)
 
@@ -28,6 +29,7 @@ ReactDOM.render(
       <Heading/>
       <Switch>
         <Route exact path="/" component={App} />
+        <Route exact path="/:name" component={PersonDetail} />
       </Switch>
     </BrowserRouter>
   </ReduxProvider>,
