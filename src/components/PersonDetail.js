@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {personDetail} from '../actions/index';
 import {connect} from 'react-redux';
 
+import PersonDetailAlbum from './PersonDetailAlbum'
+
 export class PersonDetail extends Component {
 
     componentDidMount() {
@@ -38,6 +40,9 @@ export class PersonDetail extends Component {
                                             <p>{p.bio}</p>
                                         </div>
                                     </div>
+                                </div>
+                                <div>
+                                    <PersonDetailAlbum albums={p.albums} name={p.name}/>
                                 </div>
                             </div>
                         )
